@@ -12,6 +12,14 @@ on:
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+    inputs:
+      username:
+        description: "Your Github User Name"
+        required: true
+      reason:
+        description: "Why are you running workflow"
+        required: true
+        default: "Testing implementation"
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
