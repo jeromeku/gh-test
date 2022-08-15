@@ -21,6 +21,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Test dispatch
+        if: contains(github.event.client_payload.type, 'hello')
         run: echo "Hello from ${{ github.event_name }}, my type is ${{ github.event.client_payload.type }}, ${{ github.event.client_payload.name }}!"
 
       - name: Test function
